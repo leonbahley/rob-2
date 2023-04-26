@@ -1,0 +1,22 @@
+# Use the official Node.js image as the base
+from: node:14
+
+# Set the working directory to /app
+workdir: /app
+
+# Copy the package.json and package-lock.json files to the container
+# and install dependencies
+copy:
+  - package*.json
+run:
+  - npm install
+
+# Copy the rest of the application files to the container
+# and build the application
+copy:
+  - ./
+run:
+  - npm run build
+
+# Start the application with the "start" command
+cmd: npm run start
