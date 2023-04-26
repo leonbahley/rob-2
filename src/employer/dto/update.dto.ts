@@ -15,5 +15,5 @@ export class UpdateDto {
 
   @IsNotEmpty()
   @IsString()
-  readonly phoneNumbter: string;
+  readonly phoneNumber: string;
 }

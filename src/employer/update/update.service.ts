@@ -11,12 +11,12 @@ export class UpdateService {
   constructor(@InjectModel('User') private userModel: Model<User>) {}
 
   async updateProfile(updateProfileDto: UpdateDto, user: User): Promise<User> {
-    const { name, email, password, phoneNumbter } = updateProfileDto;
+    const { name, email, password, phoneNumber } = updateProfileDto;
 
     const hashedPassword = await bcrypt.hash(password, 10);
     const updatedContent = await this.userModel.findByIdAndUpdate(
       user._id,
-      { phoneNumbter, name, email, hash: hashedPassword },
+      { phoneNumber, name, email, hash: hashedPassword },
       { new: true },
     );
     return updatedContent;

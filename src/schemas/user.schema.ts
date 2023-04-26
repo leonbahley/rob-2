@@ -6,6 +6,12 @@ import { Document } from 'mongoose';
 })
 export class User extends Document {
   @Prop()
+  favorites: string[];
+
+  @Prop()
+  applications: string[];
+
+  @Prop()
   company: boolean;
 
   @Prop()

@@ -5,7 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { UpdateModule } from './employee/update/update.module';
 import { UpdateEmployerModule } from './employer/update/update.module';
-import { CreateVacancyModule } from './employer/create-vacancy/create-vacancy.module';
+import { VacancyModule } from './employer/vacancies/vacancies.module';
 
 @Module({
   imports: [
@@ -14,7 +14,7 @@ import { CreateVacancyModule } from './employer/create-vacancy/create-vacancy.mo
     AuthModule,
     UpdateEmployerModule,
     UpdateModule,
-    CreateVacancyModule,
+    VacancyModule,
   ],
   controllers: [],
   providers: [],

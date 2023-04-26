@@ -7,6 +7,12 @@ import { User } from './user.schema';
 })
 export class Vacancy extends Document {
   @Prop()
+  applications: string[];
+
+  @Prop()
+  company: string;
+
+  @Prop()
   name: string;
 
   @Prop()
